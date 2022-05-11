@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.simplechat.ui.fragments.start.StartFragment"
+        android:label="StartFragment"
+        tools:layout="@layout/start_fragment">
+        <action
+            android:id="@+id/action_startFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.simplechat.ui.fragments.signin.SignInFragment"
+        android:label="SignInFragment"
+        tools:layout="@layout/sign_in_fragment">
+        <action
+            android:id="@+id/action_signInFragment_to_chatActivity"
+            app:destination="@id/chatActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.simplechat.ui.fragments.signup.SignUpFragment"
+        android:label="SignUpFragment"
+        tools:layout="@layout/sign_up_fragment">
+        <action
+            android:id="@+id/action_signUpFragment_to_chatActivity"
+            app:destination="@id/chatActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/chatActivity"
+        android:name="com.example.simplechat.ui.activities.ChatActivity"
+        android:label="ChatActivity" />
+</navigation>
