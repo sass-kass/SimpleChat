@@ -46,8 +46,6 @@ class SignUpFragment: Fragment() {
     ): View? {
         _binding = SignUpFragmentBinding.inflate(inflater, container, false)
 
-        binding.usersImage.load(R.drawable.ic_baseline_broken_image_24)
-
         binding.chooseImageButton.setOnClickListener {
             openGalleryForImage()
         }
@@ -59,10 +57,11 @@ class SignUpFragment: Fragment() {
 
         viewModel.requestResult.observe(viewLifecycleOwner) {
             if (viewModel.requestResult.value == true) {
-                val action = SignInFragmentDirections.actionSignInFragmentToChatActivity()
+                val action = SignUpFragmentDirections.actionSignUpFragmentToChatActivity()
                 findNavController().navigate(action)
             } else {
                 Toast.makeText( this.context, "Error, try again later", Toast.LENGTH_SHORT).show()
+                binding.registerButton.isClickable = true
             }
         }
 

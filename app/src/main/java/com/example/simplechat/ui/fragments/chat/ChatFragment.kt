@@ -34,6 +34,8 @@ class ChatFragment: Fragment() {
 
         binding.currentChatRecyclerView.adapter = adapter
 
+        viewModel.getMessages()
+
         viewModel.messageList.observe(viewLifecycleOwner) { messages ->
             adapter.submitList(messages)
         }

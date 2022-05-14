@@ -39,6 +39,7 @@ class SignInFragment: Fragment() {
                 findNavController().navigate(action)
             } else {
                 Toast.makeText( this.context, "Error, try again later", Toast.LENGTH_SHORT).show()
+                binding.loginButton.isClickable = true
             }
         }
 

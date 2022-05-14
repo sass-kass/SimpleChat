@@ -14,6 +14,7 @@
             android:paddingEnd="10dp"
             android:paddingTop="3dp"
             android:paddingBottom="5dp"
+            android:textAlignment="textEnd"
             android:layout_gravity="end"
             android:layout_marginStart="90dp"/>
 
@@ -23,11 +24,12 @@
             android:orientation="horizontal"
             android:gravity="end">
 
-        <TextView
-            android:id="@+id/my_message_time"
-            android:textSize="14sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/my_message_time"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
         </LinearLayout>
     </LinearLayout>
 </layout>
